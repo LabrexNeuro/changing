@@ -8,19 +8,46 @@
 </head>
 <body>
 
-    <!-- En-tête (identique aux autres pages) -->
+    <!-- En-tête (strictement identique aux autres pages) -->
     <header>
         <nav>
             <div class="logo-container">
-                <img src="namelogoT.png" alt="Logo CHANGING" class="logo-img-text">
+                <a href="index.html">
+                    <img src="namelogoT.png" alt="Logo CHANGING" class="logo-img-text">
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="projet.html">Le Réseau</a></li>
-                <li><a href="#">L'Équipe</a></li>
-                <li><a href="index.html#actus">Actualités</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html"><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a></li>
+                <li><a href="projet.html"><span class="lang-fr">Le Projet Scientifique</span><span class="lang-en">The Scientific Project</span></a></li>
+                <li><a href="equipe.html"><span class="lang-fr">L'Équipe</span><span class="lang-en">The Team</span></a></li>
+                <li><a href="actualites.html"><span class="lang-fr">Actualités</span><span class="lang-en">News</span></a></li>
+                <li><a href="contact.html"><span class="lang-fr">Contact</span><span class="lang-en">Contact</span></a></li>
             </ul>
+            
+            <div class="header-options">
+                <div class="accessibility-dropdown">
+                    <button onclick="toggleAccessMenu()" class="access-main-btn" aria-label="Options d'accessibilité" title="Options d'accessibilité">
+                        ♿
+                    </button>
+                    <div id="accessMenu" class="access-menu-content">
+                        <button onclick="toggleHighContrast()" class="access-item">
+                            <span class="lang-fr">Contraste élevé</span><span class="lang-en">High Contrast</span>
+                        </button>
+                        <button onclick="changeFontSize(1)" class="access-item">
+                            <span>Agrandir le texte (A+)</span>
+                        </button>
+                        <button onclick="changeFontSize(-1)" class="access-item">
+                            <span>Réduire le texte (A-)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lang-switch">
+                    <button onclick="setLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+                    <span>/</span>
+                    <button onclick="setLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -57,15 +84,7 @@
         <p>&copy; 2026 - CHANGING (FrenCH reseArch Network aGaINst Glioblastoma) - <a href="mentions.html" style="color: #fff; text-decoration: underline;">Mentions Légales</a></p>
     </footer>
 
-    <!-- Scripts JS pour l'accessibilité -->
-    <script>
-        // (Copiez ici le script de la page "Réseau" pour que le contraste/police fonctionne sur cette page aussi)
-        function switchLang(lang) { /* ... */ }
-        function toggleAccessMenu() { /* ... */ }
-        window.onclick = function(event) { /* ... */ }
-        function toggleHighContrast() { /* ... */ }
-        let currentFontSize = 100;
-        function changeFontSize(direction) { /* ... */ }
-    </script>
+    <!-- Scripts JS unifiés (Correction du problème de fermeture sur mobile et options d'accessibilité) -->
+    <script src="language.js"></script>
 </body>
 </html>
