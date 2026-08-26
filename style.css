@@ -74,7 +74,7 @@ nav a:hover {
     justify-content: space-between;
     gap: 3rem;
 	padding-top: 100px !important; 
-    margin-top: -20px; /* Ajustez cette valeur si nécessaire */
+    	margin-top: -20px; /* Ajustez cette valeur si nécessaire */
 }
 
 .hero-left {
@@ -641,8 +641,25 @@ footer p {
     .sab-list {
         grid-template-columns: 1fr !important;
     }
-}
 
+/* Conteneur des boutons de dons */
+.donate-buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Espace vertical garanti entre chaque bouton */
+    }
+
+    /* Réinitialise les marges et force chaque bouton à occuper sa propre ligne */
+    .donate-buttons-container .file-link {
+        display: block;
+        margin-left: 0 !important;
+        margin-top: 0 !important; /* On gère l'espace via le 'gap' du parent */
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+}
 
 /* --------------------------------------------------------------------------
    3. MOBILES ET ÉCRANS ÉTROITS (< 550px)
@@ -803,7 +820,7 @@ footer p {
         box-sizing: border-box !important;
         margin: 0 auto !important;
         font-size: 0.95rem !important;
-        text-align: center !important;
+        text-align: left !important;
         padding: 1rem !important;
     }
 }
