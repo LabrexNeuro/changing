@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedFontSize) {
         document.documentElement.style.fontSize = savedFontSize + '%';
     }
-    // 4. FERMETURE AUTO DU MENU ACCESSIBILITÉ SUR MOBILE
+	// 4. FERMETURE AUTO DU MENU ACCESSIBILITÉ SUR MOBILE
     const accessMenu = document.getElementById('accessMenu');
     if (accessMenu) {
         const accessItems = accessMenu.querySelectorAll('.access-item');
