@@ -126,7 +126,7 @@
             font-style: italic;
         }
 
-/* Styles pour le bloc "Nous Contacter" + "Suivez-nous" */
+        /* Styles pour le bloc "Nous Contacter" + "Suivez-nous" */
         .bottom-action-container {
             display: flex;
             flex-direction: column;
@@ -178,7 +178,6 @@
 </head>
 <body>
     
-
     <!-- En-tête -->
     <header>
         <nav>
@@ -215,8 +214,8 @@
 
                 <div class="lang-switch">
                     <button onclick="setLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
-<span>/</span>
-<button onclick="setLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+                    <span>/</span>
+                    <button onclick="setLanguage('en')" id="btn-en" class="lang-btn">EN</button>
                 </div>
             </div>
         </nav>
@@ -224,11 +223,11 @@
 
     <main class="actus-container">
 
-        <!-- SECTION 1 : LANCEMENT ET ÉVÉNEMENTS DU RÉSEAU -->
+        <!-- SECTION 1 : LANCEMENT, ÉVÉNEMENTS DU RÉSEAU ET POINT PRESSE -->
         <section class="actus-section">
             <h2 class="actus-section-title">
-                <span class="lang-fr">Lancement officiel et Événements</span>
-                <span class="lang-en">Official Launch et Events</span>
+                <span class="lang-fr">Lancement, Événements du réseau et Point Presse</span>
+                <span class="lang-en">Launch, Network Events and Press Release</span>
             </h2>
 
             <div class="actu-grid">
@@ -245,13 +244,51 @@
                         <p class="lang-fr">Lancement officiel du réseau d'excellence CHANGING réunissant les équipes de recherche, cliniciens et partenaires.</p>
                         <p class="lang-en">Official kickoff of the CHANGING network bringing together research teams, clinicians, and partners.</p>
                     </div>
-                    <!-- Exemple de lien externe (vers un site d'inscription, programme PDF, etc.) -->
                     <a href="actualites.html" target="_blank" rel="noopener noreferrer" class="actu-link">
                         <span class="lang-fr">En savoir plus </span>
                         <span class="lang-en">Read more </span>
                         <span class="external-icon">↗</span>
                     </a>
                 </article>
+
+                <!-- ENCART : Point Presse -->
+                <article class="actu-card">
+                    <div class="actu-header">
+                        <h3 class="actu-title">
+                            <span class="lang-fr">Point Presse</span>
+                            <span class="lang-en">Press Release</span>
+                        </h3>
+                    </div>
+                    <div class="actu-content">
+                        <p class="lang-fr">
+                            Lancement de CHANGING vu par Des étoiles dans la mer : 
+                            <a href="https://desetoilesdanslamer-vaincreleglioblastome.fr/article/lancement-du-reseau-national-changing" target="_blank" rel="noopener noreferrer" class="actu-link">Lire l'article <span class="external-icon">↗</span></a>
+                        </p>
+                        <p class="lang-en">
+                            CHANGING Kickoff by our partner: 
+                            <a href="https://desetoilesdanslamer-vaincreleglioblastome.fr/article/lancement-du-reseau-national-changing" target="_blank" rel="noopener noreferrer" class="actu-link">Read article <span class="external-icon">↗</span></a>
+                        </p>
+
+<p class="lang-fr">
+                            Retrouvez l'interview du Pr Idbaih sur les avancées en recherche 
+                            <a href="https://www.linkedin.com/posts/association-des-%C3%A9toiles-dans-la-mer-vaincre-le-glioblastome_temoignage-relaisdesetoiles-recherche-activity-7510624667737661440-6m_y?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAF9QXEBCWEqYiTJUVIfEJIBEr28PsQotno" target="_blank" rel="noopener noreferrer" class="actu-link">En vidéo <span class="external-icon">↗</span></a>
+                        </p>
+                        <p class="lang-en">
+                            Read Prof. Idbaih's interview on the research evolution: 
+                            <a href="https://www.linkedin.com/posts/association-des-%C3%A9toiles-dans-la-mer-vaincre-le-glioblastome_temoignage-relaisdesetoiles-recherche-activity-7510624667737661440-6m_y?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAF9QXEBCWEqYiTJUVIfEJIBEr28PsQotno" target="_blank" rel="noopener noreferrer" class="actu-link">Video <span class="external-icon">↗</span></a>
+                        </p>
+<p class="lang-fr">
+                            Retrouvez l'interview du Dr Thomas Daubon sur le Glioablastome : 
+                            <a href="https://www.sudouest.fr/sante/cancer/eclairage-ce-cancer-s-adapte-tres-rapidement-aux-therapies-en-raison-de-la-plasticite-des-tumeurs-notre-angle-d-attaque-est-la-combinaison-de-traitements-30721766.php" target="_blank" rel="noopener noreferrer" class="actu-link">Lire l'article <span class="external-icon">↗</span></a>
+                        </p>
+                        <p class="lang-en">
+                            Read Thomas's interview on Glioablastoma : 
+                            <a href="https://www.sudouest.fr/sante/cancer/eclairage-ce-cancer-s-adapte-tres-rapidement-aux-therapies-en-raison-de-la-plasticite-des-tumeurs-notre-angle-d-attaque-est-la-combinaison-de-traitements-30721766.php" target="_blank" rel="noopener noreferrer" class="actu-link">Read interview <span class="external-icon">↗</span></a>
+                        </p>
+
+                    </div>
+                </article>
+
             </div>
         </section>
 
@@ -285,21 +322,41 @@
             </div>
         </section>
 
-        <!-- SECTION 3 : OFFRES D'EMPLOIS -->
+        <!-- SECTION 3 : OFFRES D'EMPLOI ET RECRUTEMENTS -->
         <section class="actus-section">
             <h2 class="actus-section-title">
-                <span class="lang-fr">Offres d'emploi et Postdoc</span>
-                <span class="lang-en">Job Opportunities et Postdocs</span>
+                <span class="lang-fr">Offres d'emploi et Recrutements</span>
+                <span class="lang-en">Job Opportunities et Recruitments</span>
             </h2>
 
             <div class="actu-grid">
-                <!-- ENCART EXEMPLAIRE D'OFFRE D'EMPLOI -->
+                <!-- ENCART : Nous avons recruté -->
+                <article class="actu-card" style="border-left-color: #2E8B57;">
+                    <span class="job-tag" style="background-color: #E8F5E9; color: #2E8B57;">Nous avons recruté</span>
+                    <div class="actu-header">
+                        <h3 class="actu-title">Arrivée de notre nouvelle ingénieure d'étude</h3>
+                        <div class="actu-meta">
+                            <span class="actu-meta-item">📍 AP-HP (Paris)</span>
+                        </div>
+                    </div>
+                    <div class="actu-content">
+                        <p class="lang-fr">Nous sommes ravis d'accueillir notre nouvelle ingénieure d'étude au sein du réseau (WP4)</p>
+                        <p class="lang-en">We are thrilled to welcome our new research ingeneer within the network (WP4)</p>
+                    </div>
+                    <a href="portrait-nouveau-recrutement.html" class="actu-link">
+                        <span class="lang-fr">Son profil à découvrir bientôt </span>
+                        <span class="lang-en">Discover their profile soon </span>
+                        <span class="external-icon">↗</span>
+                    </a>
+                </article>
+
+                <!-- ENCART : Offre d'emploi en cours -->
                 <article class="actu-card">
                     <span class="job-tag">Thèse / Postdoc</span>
                     <div class="actu-header">
                         <h3 class="actu-title">Chercheur Post-doctoral en Bio-informatique (H/F)</h3>
                         <div class="actu-meta">
-                            <span class="actu-meta-item">📅 Candidatures ouvertes</span>
+                            <span class="actu-meta-item">📅 Candidatures à venir</span>
                             <span class="actu-meta-item">📍 Laboratoire partenaire (Paris)</span>
                         </div>
                     </div>
@@ -308,25 +365,17 @@
                         <p class="lang-en">The CHANGING network is hiring a postdoctoral researcher to work on omics data analysis applied to glioblastoma.</p>
                     </div>
                     <a href="actualites.html" target="_blank" rel="noopener noreferrer" class="actu-link">
-                        <span class="lang-fr">Voir l'offre complète (PDF / Site externe)</span>
-                        <span class="lang-en">View full job description (PDF / External site)</span>
+                        <span class="lang-fr">Offre d'emploi à venir (PDF / Site externe)</span>
+                        <span class="lang-en">View full job description soon (PDF / External site)</span>
                         <span class="external-icon">↗</span>
                     </a>
                 </article>
-
-                <!-- Si vous n'avez pas d'offre pour le moment, vous pouvez décommenter le bloc ci-dessous : -->
-                <!--
-                <div class="empty-state">
-                    <span class="lang-fr">Aucune offre d'emploi en cours pour le moment.</span>
-                    <span class="lang-en">No job openings at the moment.</span>
-                </div>
-                -->
             </div>
         </section>
 
     </main>
 
-<!-- Zone Bas de Page : Réseaux sociaux puis Bouton Contact -->
+    <!-- Zone Bas de Page : Réseaux sociaux puis Bouton Contact -->
     <div class="bottom-action-container">
         <!-- 1. Bloc Suivez-nous -->
         <div class="social-follow-block">
