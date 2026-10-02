@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANGING - Nouveaux Recrutements</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour la section des recrutements */
+        .recruits-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        .recruits-section h2 {
+            color: #0F2B5B;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .recruit-card {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #D6DFE7;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        .recruit-photo {
+            flex: 0 0 250px;
+            text-align: center;
+        }
+        .recruit-photo img {
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #38C9BB;
+        }
+        .recruit-content {
+            flex: 1;
+        }
+        .recruit-content h3 {
+            color: #0F2B5B;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .recruit-role {
+            font-size: 1.1rem;
+            color: #38C9BB;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .recruit-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Responsive design pour les petits écrans */
+        @media (max-width: 768px) {
+            .recruit-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête (Identique à la page d'accueil) -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="namelogoT.png" alt="Logo CHANGING" class="logo-img-text">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero"><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a></li>
+                <li><a href="projet.html"><span class="lang-fr">Le Projet Scientifique</span><span class="lang-en">The Scientific Project</span></a></li>
+                <li><a href="equipe.html"><span class="lang-fr">L'Équipe</span><span class="lang-en">The Team</span></a></li>
+                <li><a href="actualites.html"><span class="lang-fr">Actualités</span><span class="lang-en">News</span></a></li>
+                <li><a href="contact.html"><span class="lang-fr">Contact</span><span class="lang-en">Contact</span></a></li>
+            </ul>
+            
+            <div class="header-options">
+                <div class="accessibility-dropdown">
+                    <button onclick="toggleAccessMenu()" class="access-main-btn" aria-label="Options d'accessibilité" title="Options d'accessibilité">
+                        ♿
+                    </button>
+                    <div id="accessMenu" class="access-menu-content">
+                        <button onclick="toggleHighContrast()" class="access-item">
+                            <span class="lang-fr">Contraste élevé</span><span class="lang-en">High Contrast</span>
+                        </button>
+                        <button onclick="changeFontSize(1)" class="access-item">
+                            <span>Agrandir le texte (A+)</span>
+                        </button>
+                        <button onclick="changeFontSize(-1)" class="access-item">
+                            <span>Réduire le texte (A-)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lang-switch">
+                    <button onclick="setLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+                    <span>/</span>
+                    <button onclick="setLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recruits-section">
+            <h2>
+                <span class="lang-fr">Nouveaux Membres & Recrutements</span>
+                <span class="lang-en">New Members & Recruitments</span>
+            </h2>
+
+            <!-- Profil 1 -->
+            <div class="recruit-card">
+                <div class="recruit-photo">
+                    <img src="Photo/KawtarD.jpg" alt="Photo de Kawtar">
+                </div>
+                <div class="recruit-content">
+                    <h3>Kawtar Daddi</h3>
+                    <span class="recruit-role">
+                        <span class="lang-fr">Ingénieure d'étude</span>
+                        <span class="lang-en">Research Engineer</span>
+                    </span>
+                    <p class="recruit-desc">
+                        <span class="lang-fr">Au sein de l’équipe 4, je contribue à la caractérisation préclinique de molécules candidates dans le contexte du glioblastome, à travers différentes approches expérimentales et analytiques. Mon travail associe notamment des analyses histologiques et immunologiques à l’étude des réponses biologiques induites par les traitements, afin d’évaluer leur activité, leur impact sur le tissu tumoral et son microenvironnement, ainsi que leur potentiel thérapeutique.</span>
+                        <span class="lang-en">As part of Team 4, I contribute to the preclinical characterization of candidate molecules for glioblastoma using various experimental and analytical approaches. My work integrates histological and immunological analyses with the study of treatment-induced biological responses to evaluate the molecules' activity, their impact on tumor tissue and its microenvironment, and their therapeutic potential.</span>
+                    </p>
+                </div>
+            </div>
+
+            
+        </section>
+    </main>
+
+    <!-- Footer (Identique à la page d'accueil) -->
+    <footer>
+        <p>&copy; 2026 - CHANGING (FrenCH reseArch Network aGaINst Glioblastoma)  <a href="mentions.html" style="color: #fff; text-decoration: underline;">Mentions Légales</a></p>
+    </footer>
+
+    <!-- Inclusion du fichier JS externe -->
+    <script src="language.js"></script>
+</body>
+</html>
