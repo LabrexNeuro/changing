@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kickoff Meeting - CHANGING</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .kickoff-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .kickoff-header-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #D6DFE7;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            margin-bottom: 2.5rem;
+        }
+
+        .kickoff-header-card h1 {
+            color: #0F2B5B;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .kickoff-subtitle {
+            color: #38C9BB;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+
+        .kickoff-meta-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            font-size: 0.95rem;
+            color: #475569;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .kickoff-meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .slides-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .slide-card {
+            background: #ffffff;
+            border: 1px solid #D6DFE7;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            width: 100%;
+            box-sizing: border-border-box;
+        }
+
+        .slide-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+
+        .back-link-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #38C9BB;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #0F2B5B;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête (Inchangé) -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="namelogoT.png" alt="Logo CHANGING" class="logo-img-text">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero"><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a></li>
+                <li><a href="projet.html"><span class="lang-fr">Le Projet Scientifique</span><span class="lang-en">The Scientific Project</span></a></li>
+                <li><a href="equipe.html"><span class="lang-fr">L'Équipe</span><span class="lang-en">The Team</span></a></li>
+                <li><a href="actualites.html" class="active"><span class="lang-fr">Actualités</span><span class="lang-en">News</span></a></li>
+                <li><a href="contact.html"><span class="lang-fr">Contact</span><span class="lang-en">Contact</span></a></li>
+            </ul>
+            
+            <div class="header-options">
+                <div class="accessibility-dropdown">
+                    <button onclick="toggleAccessMenu()" class="access-main-btn" aria-label="Options d'accessibilité" title="Options d'accessibilité">
+                        ♿
+                    </button>
+                    <div id="accessMenu" class="access-menu-content">
+                        <button onclick="toggleHighContrast()" class="access-item">
+                            <span class="lang-fr">Contraste élevé</span><span class="lang-en">High Contrast</span>
+                        </button>
+                        <button onclick="changeFontSize(1)" class="access-item">
+                            <span>Agrandir le texte (A+)</span>
+                        </button>
+                        <button onclick="changeFontSize(-1)" class="access-item">
+                            <span>Réduire le texte (A-)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lang-switch">
+                    <button onclick="setLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+                    <span>/</span>
+                    <button onclick="setLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="kickoff-container">
+        
+        <div class="back-link-container">
+            <a href="actualites.html" class="back-link">
+                ← <span class="lang-fr">Retour aux actualités</span><span class="lang-en">Back to news</span>
+            </a>
+        </div>
+
+        <!-- Titre & Métadonnées centrés -->
+        <div class="kickoff-header-card">
+            <h1>Kickoff Meeting - Réseau CHANGING</h1>
+            <div class="kickoff-subtitle">INCa_LABREXCMP25-005_20529 | FrenCH reseArch Network aGaINst Glioblastoma</div>
+            <div class="kickoff-meta-center">
+                <span class="kickoff-meta-item">📅 Vendredi 9 octobre 2026</span>
+                <span class="kickoff-meta-item">📍 Hybride, IM2A Pitié-Salpêtrière, Paris</span>
+                <span class="kickoff-meta-item">👥 Organisé par Ahmed Idbaih & Magali Seassau</span>
+            </div>
+        </div>
+
+        <!-- Affichage des Diapositives sous forme d'images -->
+        <div class="slides-wrapper">
+            <div class="slide-card">
+                <img src="Photo/travail.jpg" alt="Diapositive 2 - Programme de la matinée : La Méthode de Travail">
+            </div>
+            <div class="slide-card">
+                <img src="Photo/science.jpg" alt="Diapositive 3 - Programme de l'après-midi : La Science">
+            </div>
+            <div class="slide-card">
+                <img src="Photo/fctres.jpg" alt="Diapositive 4 - Fonctionnement du Réseau et Gouvernance">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer (Inchangé) -->
+    <footer>
+        <p>&copy; 2026 - CHANGING (FrenCH reseArch Network aGaINst Glioblastoma) <a href="mentions.html" style="color: #fff; text-decoration: underline;">Mentions Légales</a></p>
+    </footer>
+
+    <script src="language.js"></script>
+</body>
+</html>
