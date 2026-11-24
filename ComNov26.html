@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANGING | Les avancées du réseau – Novembre 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .com-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .back-link-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #38C9BB;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #0F2B5B;
+            text-decoration: underline;
+        }
+
+        .com-header-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #D6DFE7;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            margin-bottom: 2rem;
+        }
+
+        .com-header-card h1 {
+            color: #0F2B5B;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .com-subtitle {
+            color: #38C9BB;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .com-content-card {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid #D6DFE7;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            color: #334155;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .com-intro {
+            font-size: 1.1rem;
+            color: #1E293B;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .com-intro p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .com-intro p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #0F2B5B;
+        }
+
+        .com-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .com-item {
+            background: rgba(255, 255, 255, 0.85);
+            border-left: 4px solid #38C9BB;
+            border-radius: 6px;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .com-item h2 {
+            color: #0F2B5B;
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .com-item p {
+            margin: 0;
+        }
+
+        .com-transverse {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .com-transverse p {
+            margin: 0;
+        }
+
+        .com-outro {
+            text-align: center;
+            font-weight: 600;
+            color: #0F2B5B;
+            font-size: 1.1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        .com-outro p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="namelogoT.png" alt="Logo CHANGING" class="logo-img-text">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero"><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a></li>
+                <li><a href="projet.html"><span class="lang-fr">Le Projet Scientifique</span><span class="lang-en">The Scientific Project</span></a></li>
+                <li><a href="equipe.html"><span class="lang-fr">L'Équipe</span><span class="lang-en">The Team</span></a></li>
+                <li><a href="actualites.html" class="active"><span class="lang-fr">Actualités</span><span class="lang-en">News</span></a></li>
+                <li><a href="contact.html"><span class="lang-fr">Contact</span><span class="lang-en">Contact</span></a></li>
+            </ul>
+            
+            <div class="header-options">
+                <div class="accessibility-dropdown">
+                    <button onclick="toggleAccessMenu()" class="access-main-btn" aria-label="Options d'accessibilité" title="Options d'accessibilité">
+                        ♿
+                    </button>
+                    <div id="accessMenu" class="access-menu-content">
+                        <button onclick="toggleHighContrast()" class="access-item">
+                            <span class="lang-fr">Contraste élevé</span><span class="lang-en">High Contrast</span>
+                        </button>
+                        <button onclick="changeFontSize(1)" class="access-item">
+                            <span>Agrandir le texte (A+)</span>
+                        </button>
+                        <button onclick="changeFontSize(-1)" class="access-item">
+                            <span>Réduire le texte (A-)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lang-switch">
+                    <button onclick="setLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+                    <span>/</span>
+                    <button onclick="setLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="com-container">
+        
+        <div class="back-link-container">
+            <a href="actualites.html" class="back-link">
+                ← <span class="lang-fr">Retour aux actualités</span><span class="lang-en">Back to news</span>
+            </a>
+        </div>
+
+        <!-- En-tête de l'article -->
+        <div class="com-header-card">
+            <h1>
+                <span class="lang-fr">CHANGING | Les avancées du réseau – Novembre 2026</span>
+                <span class="lang-en">CHANGING | Network Progress – November 2026</span>
+            </h1>
+            <div class="com-subtitle">INCa_LABREXCMP25-005_20529 | FrenCH reseArch Network aGaINst Glioblastoma</div>
+        </div>
+
+        <!-- Corps du communiqué -->
+        <article class="com-content-card">
+            
+            <div class="com-intro">
+                <p class="lang-fr">Depuis son lancement le 9 octobre, le projet CHANGING travaille à mieux comprendre le glioblastome (GBM) et son microenvironnement, en particulier les cellules immunitaires qui entourent la tumeur, appelées GAMC.</p>
+                <p class="lang-en">Since its launch on October 9, the CHANGING project has been working to better understand glioblastoma (GBM) and its microenvironment, particularly the immune cells surrounding the tumor, known as GAMCs.</p>
+                
+                <p class="lang-fr">Ce mois-ci, les équipes ont avancé sur plusieurs fronts à la fois.</p>
+                <p class="lang-en">This month, the teams have made progress on several fronts simultaneously.</p>
+            </div>
+
+            <div class="com-list">
+                <div class="com-item">
+                    <h2>
+                        <span class="lang-fr">Organiser les données et les échantillons</span>
+                        <span class="lang-en">Organizing data and samples</span>
+                    </h2>
+                    <p class="lang-fr">Nous travaillons sur un dictionnaire de variables commun. Les données issues du soin restent dans chaque hôpital, tandis que les données de recherche sont regroupées dans les centres qui réalisent les analyses. Cette organisation doit garantir la qualité, la sécurité et la conformité réglementaire des données.</p>
+                    <p class="lang-en">We are working on a shared variable dictionary. Clinical care data remains within each hospital, while research data is pooled in the centers performing the analyses. This structure ensures data quality, security, and regulatory compliance.</p>
+                </div>
+
+                <div class="com-item">
+                    <h2>
+                        <span class="lang-fr">Mieux comprendre la tumeur</span>
+                        <span class="lang-en">Better understanding the tumor</span>
+                    </h2>
+                    <p class="lang-fr">Les analyses des macrophages progressent et de nouvelles approches spatiales, qui permettent de situer les cellules au sein du tissu, sont en cours d'exploration.</p>
+                    <p class="lang-en">Macrophage analyses are progressing, and new spatial approaches—allowing us to map cells within the tissue—are currently being explored.</p>
+                </div>
+
+                <div class="com-item">
+                    <h2>
+                        <span class="lang-fr">Associer biologie et intelligence artificielle</span>
+                        <span class="lang-en">Combining biology and artificial intelligence</span>
+                    </h2>
+                    <p class="lang-fr">Un outil d'extraction automatique des informations contenues dans les comptes-rendus médicaux est en cours de développement. Les données extraites seront toujours vérifiées par un humain. L'objectif à terme est de mieux prédire l'évolution de la maladie.</p>
+                    <p class="lang-en">An automated tool for extracting information from medical reports is under development. Extracted data will always be verified by a human. The ultimate goal is to better predict disease progression.</p>
+                </div>
+
+                <div class="com-item">
+                    <h2>
+                        <span class="lang-fr">Chercher de nouvelles pistes de traitement</span>
+                        <span class="lang-en">Exploring new treatment avenues</span>
+                    </h2>
+                    <p class="lang-fr">Des stratégies ciblées sont testées sur des modèles de tumeurs en laboratoire (organoïdes) et de premières pistes de collaboration se dessinent.</p>
+                    <p class="lang-en">Targeted strategies are being tested on laboratory tumor models (organoids), and initial avenues for collaboration are taking shape.</p>
+                </div>
+
+                <div class="com-item">
+                    <h2>
+                        <span class="lang-fr">Placer les patients au cœur du parcours</span>
+                        <span class="lang-en">Placing patients at the heart of the care pathway</span>
+                    </h2>
+                    <p class="lang-fr">La charte d'engagement du comité Patient/Aidant avance et le dialogue se poursuit avec les associations de patients. Nous préparons aussi un suivi préventif, avec une évaluation des fonctions cognitives et de la marche, pour repérer plus tôt les effets des traitements et proposer une rééducation si besoin.</p>
+                    <p class="lang-en">The Patient/Caregiver committee's engagement charter is moving forward, and dialogue continues with patient associations. We are also preparing preventive monitoring, including cognitive function and gait assessments, to detect treatment effects earlier and offer rehabilitation if needed.</p>
+                </div>
+            </div>
+
+            <div class="com-transverse">
+                <p class="lang-fr">Un autre chantier, moins visible, occupe aussi le réseau : la gouvernance et l'adaptation des infrastructures numériques. Les analyses génèrent des volumes de données de plus en plus importants, qu'il faut pouvoir stocker et partager entre les centres.</p>
+                <p class="lang-en">Another, less visible effort is also keeping the network busy: governance and adapting digital infrastructures. Analyses generate increasingly large volumes of data that must be stored and shared across centers.</p>
+            </div>
+
+            <div class="com-outro">
+                <p class="lang-fr">Merci à toutes les équipes. Rendez-vous dans quelques semaines pour la suite.</p>
+                <p class="lang-en">Thank you to all the teams. See you in a few weeks for the next update.</p>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 - CHANGING (FrenCH reseArch Network aGaINst Glioblastoma) <a href="mentions.html" style="color: #fff; text-decoration: underline;">Mentions Légales</a></p>
+    </footer>
+
+    <script src="language.js"></script>
+</body>
+</html>
